@@ -8,11 +8,11 @@ public class MyQueue <T> {
     private int queueSize;
     private final int capacity;
 
-    public MyQueue(int size) {
-        queue = new Object[size];
+    public MyQueue(int capacity) {
+        queue = new Object[capacity];
         head = 0;
         queueSize = 0;
-        capacity = size;
+        this.capacity = capacity;
     }
 
     public void add(T value) {
