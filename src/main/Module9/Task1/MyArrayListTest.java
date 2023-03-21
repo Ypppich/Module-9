@@ -28,6 +28,8 @@ public class MyArrayListTest {
         myArrayList.clear();
         System.out.println(myArrayList.size());
         System.out.println(myArrayList.get(0));
+        myArrayList.add("Roma");
+        System.out.println(myArrayList.get(0));
     }
 
 }

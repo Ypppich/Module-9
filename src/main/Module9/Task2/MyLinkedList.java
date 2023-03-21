@@ -1,25 +1,23 @@
 package Task2;
-import java.util.LinkedList;
-import java.util.List;
 
-public class MyLinkedList {
+public class MyLinkedList <T> {
     private Node first;
     private Node last;
     private int size;
 
     private class Node {
-        Object value;
+        T value;
         Node next;
         Node prev;
 
-        public Node(Object value) {
+        public Node(T value) {
             this.value = value;
             this.next = null;
             this.prev = null;
         }
     }
 
-    public void add(Object value) {
+    public void add(T value) {
         Node newNode = new Node(value);
         if (last == null) {
             first = last = newNode;
@@ -30,7 +28,7 @@ public class MyLinkedList {
         }
         size++;
     }
-    public Object remove(int index) {
+    public T remove(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Out of range: " + index);
         }
@@ -62,7 +60,7 @@ public class MyLinkedList {
     public int size() {
         return size;
     }
-    public Object get(int index) {
+    public T get(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Out of range: " + index);
         }
